@@ -31,11 +31,11 @@ function App() {
         <Route
           path="/admin/dashboard"
           element={
-            <ProtectedRoute isAuthenticated={isAuthenticated} adminRoute={true}>
+            <ProtectedRoute isAuthenticated={isAuthenticated} adminRoute={true}> 
               <Dashboard />
             </ProtectedRoute>
           }
-        />
+        /> //isAdmin ={user.role === 'admin' ? true : false} ,in actual project
         <Route path="/login" element={<Login />} />
         {/* 
         <Route
